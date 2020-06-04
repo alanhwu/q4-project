@@ -25,7 +25,7 @@ public class Driver extends JPanel implements MouseListener {
 
     int screen_width = 1600;
     int screen_height = 900;
-    int balance = 200000;
+    int balance = 0;
 
     // create variables to keep track of how many assets the player has
     // start off the game with 1 lemonade stand
@@ -147,19 +147,19 @@ public class Driver extends JPanel implements MouseListener {
 
         g.drawString("Car Wash", 385, 450);
         g.setColor(Color.red);
-        g.drawString("Income:" + numCars * 30, 390, 405);
+        g.drawString("Income:" + numCars * 60, 390, 405);
         g.setColor(Color.black);
         g.drawString("Upgrade" + "($" + CarsCost + ")", 400, 490);
 
         g.drawString("Pizzeria", 385, 625);
         g.setColor(Color.red);
-        g.drawString("Income:" + numPizzas * 30, 390, 575);
+        g.drawString("Income:" + numPizzas * 120, 390, 575);
         g.setColor(Color.black);
         g.drawString("Upgrade" + "($" + PizzasCost + ")", 400, 660);
 
         g.drawString("Donut Shop", 385, 790);
         g.setColor(Color.red);
-        g.drawString("Income:" + numDonuts * 30, 390, 750);
+        g.drawString("Income:" + numDonuts * 240, 390, 750);
         g.setColor(Color.black);
         g.drawString("Upgrade" + "($" + DonutsCost + ")", 400, 840);
 
@@ -167,31 +167,31 @@ public class Driver extends JPanel implements MouseListener {
 
         g.drawString("Shrimp Boat", 1000, 100);
         g.setColor(Color.red);
-        g.drawString("Income:" + numShrimp * 30, 990, 50);
+        g.drawString("Income:" + numShrimp * 500, 990, 50);
         g.setColor(Color.black);
         g.drawString("Upgrade" + "($" + ShrimpCost + ")", 1000, 150);
 
         g.drawString("Cryptocurrency", 1000, 275);
         g.setColor(Color.red);
-        g.drawString("Income:" + numCrypto * 50, 990, 225);
+        g.drawString("Income:" + numCrypto * 1000, 990, 225);
         g.setColor(Color.black);
         g.drawString("Upgrade" + "($" + CryptoCost + ")", 1000, 325);
 
         g.drawString("Movie Studio", 1000, 450);
         g.setColor(Color.red);
-        g.drawString("Income:" + numMovies * 100, 990, 405);
+        g.drawString("Income:" + numMovies * 2000, 990, 405);
         g.setColor(Color.black);
         g.drawString("Upgrade" + "($" + MovieCost + ")", 1000, 490);
 
         g.drawString("Bank", 1000, 625);
         g.setColor(Color.red);
-        g.drawString("Income:" + numBanks * 150, 990, 575);
+        g.drawString("Income:" + numBanks * 5000, 990, 575);
         g.setColor(Color.black);
         g.drawString("Upgrade" + "($" + BankCost + ")", 1000, 660);
 
         g.drawString("Tech Company", 1000, 790);
         g.setColor(Color.red);
-        g.drawString("Income:" + numTech * 200, 990, 750);
+        g.drawString("Income:" + numTech * 10000, 990, 750);
         g.setColor(Color.black);
         g.drawString("Upgrade" + "($" + TechCost + ")", 1000, 840);
 
@@ -252,19 +252,19 @@ public class Driver extends JPanel implements MouseListener {
             balance += numDonuts * 240;
         }
         if (asset == 6) {
-            balance += numShrimp * 5;
+            balance += numShrimp * 500;
         }
         if (asset == 7) {
-            balance += numCrypto * 30;
+            balance += numCrypto * 1000;
         }
         if (asset == 8) {
-            balance += numMovies * 60;
+            balance += numMovies * 2000;
         }
         if (asset == 9) {
-            balance += numBanks * 120;
+            balance += numBanks * 5000;
         }
         if (asset == 10) {
-            balance += numTech * 240;
+            balance += numTech * 10000;
         }
     }
 
@@ -390,7 +390,7 @@ public class Driver extends JPanel implements MouseListener {
             }
 
             // detect clicks in the "upgrade" for Pizza (asset 4)
-            if ((clickX < 625 && clickX > 400) && (clickY > 720 && clickY < 675)) {
+            if ((clickX < 625 && clickX > 400) && (clickY > 650 && clickY < 700)) {
                 upgrade(4);
                 repaint();
             }
@@ -452,7 +452,7 @@ public class Driver extends JPanel implements MouseListener {
             }
 
             // detect clicks in the "upgrade" for bank (asset 9)
-            if ((clickX < 1225 && clickX > 1000) && (clickY > 720 && clickY < 675)) {
+            if ((clickX < 1225 && clickX > 1000) && (clickY > 650 && clickY < 700)) {
                 upgrade(9);
                 repaint();
             }
